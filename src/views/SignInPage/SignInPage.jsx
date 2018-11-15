@@ -1,8 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import {compose} from 'recompose';
 import {Button, Dialog, DialogTitle, Grid, withStyles} from '@material-ui/core';
-import PropTypes from 'prop-types';
 import {FacebookIcon} from '../../ui-elements/icons';
 import {firebaseConnect} from 'react-redux-firebase';
 

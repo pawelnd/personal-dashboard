@@ -9,7 +9,6 @@ import registerServiceWorker from './registerServiceWorker';
 import store from './store';
 import history from './history';
 import App from './App';
-import {initAuth} from './modules/auth/auth';
 import amber from '@material-ui/core/es/colors/amber';
 
 const theme = createMuiTheme({
@@ -19,24 +18,19 @@ const theme = createMuiTheme({
   },
 });
 
-function render() {
-  ReactDOM.render((
+(function render() {
+        ReactDOM.render((
 // eslint-disable-next-line react/jsx-filename-extension
-    <Provider store={store}>
-      <Router history={history}>
-        <MuiThemeProvider theme={theme}>
-          <App />
-        </MuiThemeProvider>
-      </Router>
-    </Provider>
-  ), document.getElementById('root'));
-}
-
-initAuth(store.dispatch)
-  .then(() => {
-    render();
-  })
-  .catch(error => console.error(error));
+            <Provider store={store}>
+                <Router history={history}>
+                    <MuiThemeProvider theme={theme}>
+                        <App />
+                    </MuiThemeProvider>
+                </Router>
+            </Provider>
+        ), document.getElementById('root'));
+    }
+)();
 
 registerServiceWorker();
 
