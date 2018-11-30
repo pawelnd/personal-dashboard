@@ -1,15 +1,14 @@
 import {createStore, applyMiddleware, compose} from 'redux';
-import {routerMiddleware} from 'react-router-redux';
 import {reactReduxFirebase} from 'react-redux-firebase'
 import rootReducer from './modules';
 import history from './history';
-import {firebaseConfig} from "./firebase/config";
+import { routerMiddleware } from 'connected-react-router'
 import {firebaseApp} from './firebase/firebase';
 
 const initialState = {};
 const enhancers = [];
 const middleware = [
-    routerMiddleware(history),
+    routerMiddleware(history)
 ];
 
 if (process.env.NODE_ENV === 'development') {

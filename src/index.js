@@ -1,15 +1,16 @@
+import './index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {MuiThemeProvider} from '@material-ui/core';
 import {createMuiTheme} from '@material-ui/core/styles';
-import {ConnectedRouter as Router} from 'react-router-redux';
-import './index.scss';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store';
-import history from './history';
-import App from './App';
+import history  from './history'
 import amber from '@material-ui/core/es/colors/amber';
+import { ConnectedRouter } from 'connected-react-router'
+import App from "./App.jsx";
+
 
 const theme = createMuiTheme({
   palette: {
@@ -20,13 +21,12 @@ const theme = createMuiTheme({
 
 (function render() {
         ReactDOM.render((
-// eslint-disable-next-line react/jsx-filename-extension
             <Provider store={store}>
-                <Router history={history}>
+                <ConnectedRouter history={history}>
                     <MuiThemeProvider theme={theme}>
                         <App />
                     </MuiThemeProvider>
-                </Router>
+                </ConnectedRouter>
             </Provider>
         ), document.getElementById('root'));
     }

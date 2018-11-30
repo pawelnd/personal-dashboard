@@ -5,26 +5,18 @@ import {FacebookIcon} from '../../ui-elements/icons';
 import {firebaseConnect} from 'react-redux-firebase';
 
 class SignInPage extends React.Component{
-    facebookAuth(){
-      this.props.firebase.login({
-        provider: 'facebook',
-        type: 'popup'
-      })
-    }
     render(){
         return (
           <Dialog open={true}>
               <DialogTitle>Sign in</DialogTitle>
-              <div className={this.props.classes.signInDialog}>
-                  <Button onClick={() => {this.facebookAuth()}} className={this.props.classes.buttonFacebook}>
-                      <FacebookIcon style={{
-                        width: 30,
-                        height: 30,
-                        paddingRight: 20,
-                      }}
-                      /> Login with Facebook
-                  </Button>
-              </div>
+              <Button onClick={() => {this.facebookAuth()}} className={this.props.classes.buttonFacebook}>
+                  <FacebookIcon style={{
+                      width: 30,
+                      height: 30,
+                      paddingRight: 20,
+                  }}
+                  /> Login with Facebook
+              </Button>
           </Dialog>
         );
     }
