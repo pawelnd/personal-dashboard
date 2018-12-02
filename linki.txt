@@ -1,1 +1,4 @@
 https://medium.com/hexient-labs/redux-ramda-reselect-recompose-41171dcf63fd
+https://github.com/mkczarkowski/react-design-patterns
+https://github.com/andrewngu/sound-redux
+https://github.com/echenley/react-news
