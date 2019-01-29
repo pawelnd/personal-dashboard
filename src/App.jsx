@@ -3,7 +3,7 @@ import React from 'react';
 import {Route, Link, withRouter} from 'react-router-dom';
 import {Component} from 'react';
 import SignInPage from './views/SignInPage/SignInPage';
-import {PrivateRoute} from "./views/components/PrivateRoute/PrivateRoute";
+import {PrivateRoute} from "./components/PrivateRoute/PrivateRoute";
 
 
 let auth = () => <div>AUTH</div>;
